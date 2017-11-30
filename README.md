@@ -1,2 +1,3 @@
 # hello-world
-my first repository 
+Just another repo
+my name is Ganesh Tambave, I live in Bergen.
