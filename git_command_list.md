@@ -64,3 +64,14 @@ _A list of my commonly used Git commands_
 | `git log --summary` | View changes (detailed) |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
 
+
+### Git tag
+
+| Command | Description |
+| ------- | ----------- |
+| `git tag -a "Release_1_0" -m "Tagged basic string operation code" HEAD` | tag current HEAD |
+| `git push origin tag Release_1_0` | push the tag to remote repository |
+| `git tag -l` | list the tag |
+| `git show name_of_tag` | details about tag |
+| `git tag -d name_of_tag` | delete tag from local repository |
+| `git push origin :name_of_tag` | delete tag from remote repository |
