@@ -1,5 +1,6 @@
 Git Commands
 ============
+https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
 
 _A list of my commonly used Git commands_
 
