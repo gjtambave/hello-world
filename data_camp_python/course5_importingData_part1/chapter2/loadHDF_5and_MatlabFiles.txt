@@ -1,0 +1,8 @@
+You can find the LIGO data plus loads of documentation and tutorials here(https://losc.ligo.org/events/GW150914/). There is also a great tutorial on Signal Processing with the data here(https://losc.ligo.org/s/events/GW150914/GW150914_tutorial.html).
+
+
+
+
+The file 'albeck_gene_expression.mat' is in your working directory. This file contains gene expression data from the Albeck Lab at UC Davis. You can find the data and some great documentation here.
+https://www.mcb.ucdavis.edu/faculty-labs/albeck/workshop.htm
+

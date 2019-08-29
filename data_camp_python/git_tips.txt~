@@ -1,0 +1,62 @@
+> git status -> check the state of a repository
+
+> git add filename -> puts file in staging area unsaved
+
+> git commit -m "some message in quotes" -> saves the file in repository with single line message (-m)
+> git commit -> with "-m" here one can write longer message
+
+> git commit -m "some message in quotes" filename -> save changes made to the specific file name
+
+> git diff path/to/file -> shows diff
+> git diff -r HEAD path/to/file 
+-> To compare a file's current state to the changes in the staging area, you can use git diff -r HEAD path/to/file. The -r flag means "compare to a particular revision", HEAD is a shortcut meaning "the most recent commit", and the path to the file is the relative to where you are (for example, the path from the root directory of the repository)
+
+> git log -> show history of the repository 
+> git log path/to specific file -> specific file's history
+
+> git show faaa16 -> shows info. about specific commit with an e.g. ID faaa16
+> git show HEAD -> shows info. about a most recent commit (using HEAD)
+> git show HEAD~1 -> shows info. about a commit jsut before a most recent commit (using HEAD)
+
+> git annotate file name -> shows who change what file
+
+> git diff ID1..ID2 -> shows the what has changed between two specified commits using ID1 and ID2 with connector ".." As e.g. (1) git diff abc123..def456 (2) git diff HEAD..HEAD~3
+
+> git add filename and git commit -m "add message" -> to add and commit new file to repository
+
+> .gitignore ->tell Git to ignore certain files by
+creating a file in the root directory of your repository called .gitignore and storing a list of wildcard patterns that specify the files you don't want Git to pay attention to. For example, if .gitignore contains: build and *.mpl 
+then Git will ignore any file or directory called build (and, if it's a directory, anything in it), as well as any file whose name ends in .mpl.
+
+>git clean -n -> will show the history of files which are not tracked (unwanted files)
+>git clean -f -> this will delete these unwanted files
+
+-->To see how git is configured 
+> git config --list --local -> settings for one specific project
+git config --list --global ->  settings for every one of your projects
+git config --list --system -> settings for every user on this computer
+
+--> To change the git configuration
+> git config --global setting.name setting.value
+e.g. > git config --global user.email gjtambave@gmail.com  -> this will change the user email to gjtambave@gmail.com
+---> Most of Git's settings should be left as they are. However, there are two you should set on every computer you use: your name and your email address. These are recorded in the log every time you commit a change, and are often used to identify the authors of a project's content in order to give credit (or assign blame, depending on the circumstances). The keys that identify your name and email address are user.name and user.email respectively.
+
+>git checkout -- filename->  undo changes to unstaged files
+this command will discard the changes that have not yet been staged. (The double dash -- must be there to separate the git checkout command from the names of the file or files you want to recover.)
+"Use this command carefully: once you discard changes in this way, they are gone forever."
+
+> git checkout hashID filename --> restore an old version of a file
+e.g. git checkout faaa16 report.txt will replace the report.txt file to version with ID faaa16
+
+-->git checkout -- filename --> will undo changes that have not yet been staged. If you want to undo changes that have been staged, you can use 
+
+> git checkout -- directory name --> will undo changes made to the all files in the given directory
+
+> git reset HEAD filename -> How can I unstage a file that I have staged?
+
+This does not restore the file to the state it was in before you started making changes. Instead, it resets the file to the state you last staged. If you want to go all the way back to where you were before you started making changes, you must git checkout -- filename as well.
+
+> git reset HEAD directory name --> will unstage any files from the given directory that has been staged
+
+
+
